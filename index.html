@@ -8,7 +8,10 @@
 </head>
 <body>
     <div ng-controller="listaController">
-        <ul ng-repeat="tarefa in tarefas">
+        <form>
+            Busca: <input type="search" ng-model="busca" />
+        </form>
+        <ul ng-repeat="tarefa in tarefas | filter:busca">
             <li>
                 {{tarefa.prioridade}} - {{tarefa.nome}} 
                 <a href="" ng-click="remover($index)">Remover</a>
