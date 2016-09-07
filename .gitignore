@@ -1,4 +1,4 @@
-reated by https://www.gitignore.io/api/grunt,node
+# Created by https://www.gitignore.io/api/grunt,bower,node,code
 
 ### grunt ###
 # Grunt usually compiles files inside this directory
@@ -6,6 +6,13 @@ dist/
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
+
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
 
 
 ### Node ###
@@ -51,3 +58,10 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json

@@ -1,0 +1,24 @@
+{
+  "name": "soldado-angular-js-code-squad",
+  "description": "Application test",
+  "main": "index.js",
+  "authors": [
+    "@LucasSantAbreu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs"
+  ],
+  "homepage": "https://github.com/lucassabreu/soldado-angular-js-code-squad",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8"
+  }
+}
