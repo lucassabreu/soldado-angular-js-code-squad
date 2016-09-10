@@ -14,7 +14,7 @@ MyApp.directive('myTarefas', function () {
     return {
         // template : "Eu quero {{tarefa.nome}} com prioridade {{tarefa.prioridade}}",
         templateUrl : function (elem, attr) {
-            return 'template-' + attr.type + '.html'
+            return '/aula-08/template-' + attr.type + '.html'
         }
     };
 });
