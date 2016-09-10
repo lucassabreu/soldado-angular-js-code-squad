@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="Filtros">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de AngularJS</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        // eh obrigatorio existir um módulo
+        var filtrosModule = angular.module('Filtros', []);
+
+        filtrosModule.filter('reverse', function () {
+            return function (input, lowercase, end) {
+                input = input || "";
+                end = end || "";
+                var out = "";
+                for(var i = input.length - 1; i >= 0; i--)
+                    out += input[i];
+                if(lowercase)
+                    out = out.toLowerCase();
+                out += end;
+                return out;
+            };
+        });
+
+        filtrosModule.controller('filtrosController', function($scope) {
+            $scope.texto = "Lucas dos Santos Abreu";
+        });
+    </script>
+</head>
+<body>
+    <pre ng-controller="filtrosController">
+        {{texto}}
+        {{texto | reverse:true:'<-'}}
+    </pre>
+</body>
+</html>

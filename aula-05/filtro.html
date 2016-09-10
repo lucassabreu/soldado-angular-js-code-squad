@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="Filtros">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de AngularJS</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        // eh obrigatorio existir um módulo
+        var filtros = angular.module('Filtros', []);
+        filtros.controller('filtrosController', function($scope) {
+            $scope.numero = 100;
+            $scope.texto = "Lucas dos Santos Abreu";
+        });
+    </script>
+</head>
+<body>
+    <p ng-controller="filtrosController">
+        {{numero | number:2}}<br>
+        {{numero | currency:'R$ ':5 | lowercase}}<br>
+        {{texto | lowercase}}<br>
+    </p>
+</body>
+</html>
