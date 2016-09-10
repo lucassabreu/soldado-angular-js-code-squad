@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso AngularJs</title>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/aula-10/app.js"></script>
+</head>
+<body>
+    <ul ng-controller="diretivasController">
+        <li><strong>ng-app</strong>: define o módulo da aplicação que será usado</li>
+        <li><strong>mg-model</strong>: utilizado para realizar o 'bing'</li>
+        <li><strong>ng-controller</strong>: qual controller utilizar</li>
+        <li><strong>ng-bind</strong>: substitui o uso do {{}}</li>
+        <li><strong>ng-class</strong>: permite aplicar classes CSS</li>
+        <li><strong>ng-show/ng-hide</strong>: permite controlar a exibição do elemento</li>
+        <li><strong>ng-repeat</strong>: permite imprimir vários elementos baseados em uma lista</li>
+        <li><strong>ng-src/ng-href</strong></li>
+        <li>
+            <div><strong>ng-{evento}</strong>: chama um método do controller baseado no evento</div>
+            <ul>
+                <li><strong>ng-blur</strong></li>
+                <li><strong>ng-change</strong></li>
+                <li ng-click="msg('click')"><strong>ng-click</strong></li>
+                <li ng-dblclick="msg('click duplo')"><strong>ng-dblclick</strong></li>
+                <li><strong>ng-focus</strong></li>
+                <li><strong>ng-keydown</strong><input type="text" ng-keydown="msg('tecla pressionada')"></li>
+                <li><strong>ng-keypress</strong></li>
+                <li><strong>ng-keyup</strong></li>
+                <li><strong>ng-mousedown</strong></li>
+                <li><strong>ng-mouseup</strong></li>
+                <li ng-mouseenter="msg('mouseenter')"><strong>ng-mouseenter</strong></li>
+                <li><strong>ng-mouseleave</strong></li>
+                <li><strong>ng-mousemove</strong></li>
+                <li><strong>ng-mouseover</strong></li>
+                <li><strong>ng-submit</strong></li>
+                <li><strong>...</strong></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
