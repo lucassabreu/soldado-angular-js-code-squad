@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso AngularJs</title>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/aula-11/app.js"></script>
+    <style type="text/css">
+        .css-form input.ng-invalid /*.ng-touched*/ {
+            background-color: #FA787E;
+        }
+
+        .css-form input.ng-valid /*.ng-touched*/ {
+            background-color: #78FA89;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="formCtrl">
+        <h1>Formulários - <a href="https://docs.angularjs.org/guide/forms">ler docs...</a> </h1>
+        <form name="form" novalidate ng-submit="salvar()" class="css-form">
+            Nome: <input name="nome" type="text" ng-model="formulario.nome" required /> <br>
+                <div ng-show="form.$submmited || form.nome.$touched">
+                    <ul>
+                        <li ng-show="form.nome.$error.required">Este campo é obrigatório</li>
+                    </ul>
+                </div>
+            E-mail: <input name="email" type="email" ng-model="formulario.email" required /> <br>
+                <div ng-show="form.$submmited || form.email.$touched">
+                    <ul>
+                        <li ng-show="form.email.$error.required">Este campo é obrigatório</li>
+                        <li ng-show="form.email.$error.email">Este campo deve ser um e-mail</li>
+                    </ul>
+                </div>
+            Gênero: <br>
+                <input type="radio" value="M" ng-model="formulario.genero" /> Masculino
+                <input type="radio" value="F" ng-model="formulario.genero" /> Feminino <br>
+            <input type="button" value="Reset" ng-click="reset()" />
+            <input type="submit" value="Salvar" ng-disabled="form.$invalid"/>
+        </form>
+        <hr>
+        <pre>{{formulario}}</pre>
+        <pre>{{salvo}}</pre>
+    </div>
+</body>
+</html>
